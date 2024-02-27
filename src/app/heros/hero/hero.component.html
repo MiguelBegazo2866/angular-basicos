@@ -1,0 +1,33 @@
+
+<h1>{{ name }}</h1>
+<div class="d-flex">
+  <h3 class="p-2 border border-primary w-25">Nombre</h3>
+  <h3 class="p-2 border border-primary w-25">{{ name }}</h3>
+</div>
+
+<div class="d-flex">
+  <h3 class="p-2 border border-primary w-25">Edad</h3>
+  <h3 class="p-2 border border-primary w-25">{{ age }}</h3>
+</div>
+
+<div class="d-flex">
+  <h3 class="p-2 border border-primary w-25">Metodo</h3>
+  <h3 class="p-2 border border-primary w-25">{{ HeroeDescription }}</h3>
+</div>
+
+<div class="d-flex">
+  <h3 class="p-2 border border-primary w-25">Capitalizado</h3>
+  <h3 class="p-2 border border-primary w-25">{{ capitalizedName }}</h3>
+</div>
+
+<button *ngIf="name!=='Spiderman'" (click)="changeHero()" class="btn btn-primary mx-2">
+    Cambiar nombre
+</button>
+
+<button *ngIf="age!==25" (click)="changeAge()" class="btn btn-warning">
+  Cambiar edad
+</button>
+
+<button (click)="reset()" class="btn btn-success mx-2">
+  Valores Iniciales
+</button>
